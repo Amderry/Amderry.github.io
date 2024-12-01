@@ -1,0 +1,209 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Цвет фона на случай, если изображение не загрузится */
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.pinimg.com/originals/45/b4/93/45b49326f5a4a6cec695120b3d21235b.jpg'); /* Укажите путь к своему фоновому изображению */
+    background-size: cover; /* Делает фон покрывающим всю страницу */
+    background-position: center; /* Центрирует фон */
+    background-attachment: fixed; /* Закрепляет фон, чтобы он не прокручивался с контентом */
+    filter: brightness(50%); /* Затемнение фона для улучшения читаемости */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 219, 186, 0.8); /* Пастельный оттенок светло-желтого с меньшей прозрачностью */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.logo {
+    max-width: 150px; /* Ограничиваем максимальную ширину логотипа */
+    width: 100%; /* Логотип масштабируется в зависимости от экрана */
+    margin-bottom: 20px; /* Отступ снизу */
+    background-color: transparent; /* Убираем фон у логотипа, если он есть */
+    display: block; /* Обеспечивает, что изображение будет выравниваться по центру */
+    margin-left: auto;
+    margin-right: auto; /* Центрируем логотип */
+}
+
+h1 {
+    color: #6c5b7b; /* Светлый пастельный оттенок для заголовков */
+    font-size: 2.25rem; /* Устанавливаем размер шрифта с использованием rem */
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555; /* Мягкий темно-серый цвет для параграфов */
+    font-size: 1.125rem; /* Размер шрифта для параграфов с использованием rem */
+}
+
+.copy-ip {
+    background-color: #f8b400;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.125rem; /* Размер шрифта с использованием rem */
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.copy-ip:hover {
+    background-color: #f38f00;
+    transform: scale(1.05); /* Легкое увеличение кнопки при наведении */
+}
+
+#ip-address {
+    font-size: 1.25rem; /* Размер IP-адреса с использованием rem */
+    color: #6c5b7b;
+    margin-top: 10px;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.navigation {
+    margin-top: 30px;
+}
+
+.nav-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.125rem; /* Размер шрифта с использованием rem */
+    color: #6c5b7b; /* Пастельный цвет для навигации */
+    text-decoration: none;
+    border: 2px solid #6c5b7b; /* Добавлена обводка */
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #f8b400; /* Светлый желтый фон при наведении */
+    color: #fff; /* Белый цвет текста при наведении */
+    transform: scale(1.05); /* Легкое увеличение кнопки при наведении */
+}
+
+ul {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Медиазапросы для адаптивности */
+
+/* Для экранов с шириной до 768px (планшеты и мобильные устройства в ландшафтной ориентации) */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        max-width: 400px; /* Уменьшаем максимальную ширину контейнера */
+    }
+
+    .logo {
+        max-width: 120px; /* Уменьшаем размер логотипа */
+    }
+
+    h1 {
+        font-size: 2rem; /* Уменьшаем размер заголовка */
+    }
+
+    p {
+        font-size: 1rem; /* Уменьшаем размер текста параграфов */
+    }
+
+    .copy-ip {
+        font-size: 1rem; /* Уменьшаем размер шрифта для кнопки */
+        padding: 12px 24px; /* Уменьшаем размер кнопки */
+    }
+
+    .nav-link {
+        font-size: 1rem; /* Уменьшаем размер шрифта для кнопок навигации */
+        padding: 8px 16px; /* Уменьшаем размер кнопок */
+    }
+}
+
+/* Для экранов с шириной до 480px (мобильные телефоны в портретной ориентации) */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        max-width: 90%; /* Уменьшаем контейнер до 90% ширины экрана */
+    }
+
+    .logo {
+        max-width: 100px; /* Уменьшаем логотип */
+    }
+
+    h1 {
+        font-size: 1.75rem; /* Уменьшаем размер заголовка */
+    }
+
+    p {
+        font-size: 0.875rem; /* Уменьшаем размер текста параграфов */
+    }
+
+    .copy-ip {
+        font-size: 1rem; /* Уменьшаем размер шрифта для кнопки */
+        padding: 10px 20px; /* Уменьшаем размер кнопки */
+    }
+
+    .nav-link {
+        font-size: 0.875rem; /* Уменьшаем размер шрифта для кнопок навигации */
+        padding: 8px 12px; /* Уменьшаем размер кнопок */
+    }
+
+    .main-image {
+        width: 90%; /* Уменьшаем размер изображения */
+        margin-top: 15px;
+    }
+}
+
+/* Для экранов с шириной более 1200px (десктопы с большим экраном) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 50px;
+        max-width: 600px; /* Увеличиваем максимальную ширину контейнера */
+    }
+
+    .logo {
+        max-width: 180px; /* Увеличиваем размер логотипа на больших экранах */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Увеличиваем размер заголовка */
+    }
+
+    p {
+        font-size: 1.25rem; /* Увеличиваем размер текста параграфов */
+    }
+
+    .copy-ip {
+        font-size: 1.25rem; /* Увеличиваем размер шрифта для кнопки */
+        padding: 18px 36px; /* Увеличиваем размер кнопки */
+    }
+
+    .nav-link {
+        font-size: 1.25rem; /* Увеличиваем размер шрифта для кнопок навигации */
+        padding: 12px 24px; /* Увеличиваем размер кнопок */
+    }
+}
